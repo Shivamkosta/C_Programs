@@ -1,0 +1,15 @@
+#include <stdio.h>  
+int main(){
+int row,col,num,temp=1;
+    printf("Enter Number of rows :");
+    scanf("%d",&num);
+    
+    for(row=1;row<=num;row++){
+        for(col=1;col<=row;col++){
+            printf("%d",temp);
+            temp++;
+        } 
+        printf("\n");
+    }
+    return 0;
+}

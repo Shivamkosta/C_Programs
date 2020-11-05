@@ -1,0 +1,15 @@
+#include <stdio.h>  
+int main(){
+     int i,num;
+     printf("Enter any Number to check prime factor : ");
+     scanf("%d \n",&num);
+     
+     printf("All Prime factors are %d \n :",num);
+     
+     for(i=1;i<=num;i++){
+         if(num%i==0){
+             printf("%d \n",i);
+         }
+     }
+    return 0;
+}
