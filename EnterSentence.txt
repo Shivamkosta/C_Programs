@@ -1,0 +1,13 @@
+
+#include<stdio.h>
+#include<conio.h>
+#define MAX 500
+
+void main(){
+    char arr[MAX];
+    printf("Entered any sentence which can include space \n");
+    printf("To Exit press enter \n");
+    scanf("%[^\n]s ",arr);
+    
+    getch();
+}

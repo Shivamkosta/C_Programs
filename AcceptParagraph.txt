@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<conio.h>
+#define MAX 20
+
+void main(){
+    char para[MAX];
+    printf("Enter your paragraph \n");
+    scanf("%[^\t]s ",para);
+    
+    printf("Your entered paragraph %s is :",para);
+    
+    getch();
+}
