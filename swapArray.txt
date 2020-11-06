@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main()
+{
+    int a[10],b[10],c[10],i;
+    printf("Enter First Array is :");
+    
+    for(i=0;i<3;i++){
+        scanf("%d",&a[i]);
+    }
+    printf("Enter second Array is :");
+    
+    for(i=0;i<3;i++){
+        scanf("%d",&b[i]);
+    }
+    printf("#########################");
+    printf("\n Arrays before swaping :");
+    printf("\n Enter first array :");
+    for(i=0;i<3;i++){
+        printf("%d\n",a[i]);
+    }
+    
+    printf("\n Enter second array :");
+     for(i=0;i<3;i++){
+        printf("%d\n",b[i]);
+    }
+    for(i=0;i<3;i++){
+        c[i]=a[i];
+        a[i]=b[i];
+        c[i]=c[i];
+    }
+    printf("\nArrays after swaping :");
+    printf("First Array after swaping :");
+    for(i=0;i<3;i++){
+        printf("%d\n",a[i]);
+    }
+    printf("Second Array after swaping :");
+    for(i=0;i<3;i++){
+        printf("%d\n",b[i]);
+    }
+
+    return 0;
+}

@@ -1,0 +1,25 @@
+
+#include <stdio.h>
+
+int main()
+{
+ char first[20],second[20],third[20];
+ printf("Enter first String :");
+ gets(first);
+
+ printf("Enter second String :");
+ gets(second);
+ 
+ printf("\n Before swaping String :");
+ printf("\n First String %s is :",first);
+ printf("\n second String %s is :",second);
+ 
+ strcpy(third,first);
+ strcpy(first,second);
+ strcpy(second,third);
+ 
+ printf("\nAfter swaping String is :");
+ printf("\n First String %s :",first);
+ printf("\n second String %s  :",second);
+    return 0;
+}

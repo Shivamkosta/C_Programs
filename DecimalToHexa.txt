@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int DecimalNum,i,rem;
+    char HexaArr[100];
+    printf("Enter an Decimal Number :");
+    scanf("%d",&DecimalNum);
+    
+    while(DecimalNum != 0){
+        rem = DecimalNum%16;
+        
+        if(rem < 10){
+            HexaArr[i++] = 48+rem; //48 ASCII code of 0
+        }else{
+            HexaArr[i++] = 55+rem; //55 ASCII code of 10
+        } 
+        DecimalNum /= 16;
+    }
+    printf("0x");
+    
+    for(int j = i-1; j>=0; j--) //print hexaArr in reverse order.
+    {
+        printf("%c",HexaArr[j]);
+    }
+    return 0;
+}
