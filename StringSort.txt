@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+  char string[100];
+  int i,j,temp;
+  printf("Enter a String to sort :");
+  scanf("%[^\n]",string);
+  
+  int len = strlen(string);
+  for(i=0;i<len-1;i++)
+  {
+      for(j=i+1;j<len;j++){
+          if(string[i]>string[j]){
+              //swapping
+              temp = string[i];
+              string[i] = string[j];
+              string[j] = temp;
+          }
+      }
+  }
+   
+   printf("After sorting String %s :",string);
+}

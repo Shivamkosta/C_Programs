@@ -1,0 +1,22 @@
+
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+    char a[6],str[6];
+    int i,j,k=0;
+    printf("Enter any String :");
+    scanf("%[^\n]",str);
+    for(i=0;i<strlen(str);i++)
+    {
+     if(str[i] =='a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' ||
+        str[i] == 'A' || str[i] == 'E' || str[i] == 'O' || str[i] == 'U')
+        {
+            a[k] = str[i];
+            k++;
+        }
+    }
+    for(j=0;j<k;j++){
+        printf("%c",a[j]);
+    }
+}

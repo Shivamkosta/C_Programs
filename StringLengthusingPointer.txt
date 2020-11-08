@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void main()
+{
+  char stringlen[100],*pt;
+  int i = 0;
+  
+  printf("******Find String length using pointer******** \n");
+  printf("Enter any String :");
+  scanf("%[^\n]",stringlen);
+  pt = stringlen;
+  
+  while(*pt != NULL){
+      i++;
+      pt++;
+  }
+  printf("Length of String :%d ",i);
+  getch();
+}
