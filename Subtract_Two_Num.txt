@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+void main()
+{
+    int num1,num2,sub;
+    printf("Enter any two numbers :");
+    scanf("%d%d",&num1,&num2);
+    
+    sub = num1-num2;
+    printf("Sum of two numbers %d - %d = %d :",num1,num2,sum);
+    getch();
+}

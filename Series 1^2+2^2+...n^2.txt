@@ -1,0 +1,23 @@
+
+#include<stdio.h>
+
+void main()
+{
+    int n,sum=0;
+    printf("Enter maximum value of series :");
+    scanf("%d",&n);
+    
+    sum = (n*(n+1)*(2*n+1))/6;
+    printf("Sum of series :");
+    
+    //series is given a last digit of calculate sum series.
+    for(int i=1; i<=n; i++)
+    {
+        if(i != n)
+        printf("%d^2 +  ",i);
+        else
+        printf("%d^2 = %d",i,sum);
+    }
+    
+    getch();
+}
