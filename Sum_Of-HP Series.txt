@@ -1,0 +1,26 @@
+//1 + 1/2 + 1/5 + 1/8 + 1/11 + .....
+#include<stdio.h>
+
+int main() {
+	int a,diff,i,denominator;
+	int n;
+	float sum=0.0;
+	printf("Enter the first number of the H.P. series: ");
+	scanf("%d",&a);
+	printf("Enter the total numbers in the H.P. series: ");
+	scanf("%d",&n);
+	printf("Enter the common difference of H.P. series: ");
+	scanf("%d",&diff);
+	
+	denominator = a;
+	printf("HP series :");
+	for(i = 0; i<n; i++)
+	{
+	    printf("1/%d+",denominator);
+	    sum = sum + 1/(float)denominator;
+	    denominator = denominator + diff;
+	}
+	printf("\nSum of all HP series %d and term is %.2f\n",n,sum);
+	getch();
+	return 0;
+}

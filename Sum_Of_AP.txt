@@ -1,3 +1,4 @@
+//Arithmatic progressive series (AP)
 #include<stdio.h>
 
 void main()

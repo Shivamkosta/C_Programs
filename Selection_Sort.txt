@@ -1,0 +1,54 @@
+ 
+#include<stdio.h>
+//Selection_sort Algo...
+int min(int A[100],int i, int N)
+{
+    int j,LOC,MIN;
+    MIN = A[i];
+    LOC = i;
+    for(j=i+1; j<=N-1; j++)
+    {
+        if(MIN > A[j])
+        {
+            MIN = A[j];
+            LOC = j;
+        }
+        return LOC;
+    }
+}
+int main()
+{
+    int A[100],size,i;
+    int temp,LOC;
+    
+    printf("Enter size of Arrray (1-100) :");
+    scanf("%d",&size);
+    
+    printf("Enter %d array elements are :\n",size);
+    for(i=0; i<=size-1; i++)
+    {
+        scanf(" %d ",&A[i]);
+    }
+    
+    printf("The Original array is :\n");
+    for(i=0; i<size; i++)
+    {
+        printf(" %d ",A[i]);
+    }
+    for(i=0; i<size-1; i++)
+    {
+        //define function min
+        LOC = min(A,i,size);
+        temp = A[i];
+        A[i] = A[LOC];
+        A[LOC] = temp;
+        
+    }
+    printf("\nNew Sorted Array :\n");
+    for(i=0; i<=size-1; i++)
+    {
+        printf(" %d ",A[i]);
+    }
+    
+}
+    

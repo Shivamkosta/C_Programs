@@ -1,0 +1,24 @@
+//Geomatric progressive series (GP)
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float a,r,tn,sum =0;
+    int n;
+    printf("Enter the first number of GP series :");
+    scanf("%f",&a);
+    
+    printf("Enter the total number of GP series :");
+    scanf("%d",&n);
+    
+    printf("Enter the common ratio :");
+    scanf("%f",&r);
+    
+    sum = (a * (1 - (pow(r,n+1))))/(1-r);
+    tn = a * (1-pow(r,n-1));
+    
+    printf("nth term of GP :%f\n",tn);
+    printf("sum of GP :%f",sum);
+    return 0;
+}
