@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    long num;
+    int rem=0,dec=0,place=0,j=0;
+    char hexa[100];
+    printf("Enter Binray Number :");
+    scanf("%ld",&num);
+    
+    
+    //binary to decimal conversion
+    while(num!=0)
+    {
+        rem = num %10;
+        dec = dec + rem *(pow(2,place));
+        num = num/10;
+        place++;
+    }
+    printf("Binary Equivalent of decimal number is %d :",dec);
+    printf("\n hexadecimal value is :");
+
+    //dacimal to hexadecimal conversion
+    place = 0;
+    rem = 0;
+    while(dec != 0)
+    {
+        rem = dec % 16;
+        if(rem < 10)
+        {
+            hexa[place] = rem + 48;
+        }
+        else 
+        {
+            hexa[place] = rem + 55;
+        }
+        place++;
+        dec = dec / 16;
+    }
+    for(j=place-1; j>=0; j--)
+    {
+        printf("%c",hexa[j]);
+    }
+    
+    return 0;
+}

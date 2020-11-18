@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+   int i=0,j=0,len;
+   char arr[50];
+   
+   
+   printf("Enter String with white space :");
+   scanf("%s",arr);
+   
+   len = (int)strlen(arr);
+   
+   while(i != len)
+   {
+       if(arr[i] != NULL)
+            arr[j++] = arr[i];
+            i++;
+   }
+   str[j] = 0;
+   printf("Your String is %s",arr);
+    return 0;
+}

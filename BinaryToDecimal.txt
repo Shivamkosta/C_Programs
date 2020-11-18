@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    long num;
+    int rem=0,dec=0,place=0;
+    printf("Enter Binray Number :");
+    scanf("%ld",&num);
+    printf("Binary Equivalent of decimal number is %ld :",num);
+    
+    while(num!=0)
+    {
+        rem = num %10;
+        dec = dec + rem *(pow(2,place));
+        num = num/10;
+        place++;
+    }
+    printf("%d\n",dec);
+
+    return 0;
+}

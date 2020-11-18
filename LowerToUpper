@@ -5,7 +5,7 @@ int main()
    char string[1000];
    
    printf("Input a string to convert to lower case\n");
-   gets(string);
+   scanf("%s",&string);
    
    printf("The string in upper case: %s\n", strupr(string));
    

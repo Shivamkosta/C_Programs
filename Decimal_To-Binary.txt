@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    int num,value,rem,i=1,binary=0;
+    printf("Enter a Decimal Number :");
+    scanf("%d",&num);
+    
+    value = num;
+    while(num!=0)
+    {
+        rem = num % 2;
+        num = num / 2;
+        binary = binary + (rem*i);
+        i = i*10;
+        
+    }
+    printf("\n Binary equivalent of %d = %d",value,binary);
+    getch();
+    return 0;
+}
