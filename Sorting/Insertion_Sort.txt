@@ -2,10 +2,10 @@
 #include <stdio.h>
     //function declaration
 //void insertion_sort(int [],int);
-int arr[100];
+	int arr[100];
     int i,size;
     
-     printf("Enter array size: ");
+    printf("Enter array size: ");
     scanf(" %d", &size);
 
     printf("Enter %d array element:\n ", size);
@@ -23,6 +23,7 @@ int arr[100];
     //define Insertion sort function
     insertion_sort(arr,size);
    printf("\nNew sorted array is:\n ");
+   
     for(i=0; i<=size-1; i++)
     {
         printf(" %d\n",arr[i]);
@@ -35,7 +36,7 @@ int arr[100];
         for(i=0; i<N; i++)
         {
             temp = arr[i];
-            for(j=i-1; j>=0 && temp < arr[j]; j--)
+            for(j=i+1; j>=0 && temp < arr[j]; j--)
             {
                 //array swaping
                 arr[j+1] = arr[j];

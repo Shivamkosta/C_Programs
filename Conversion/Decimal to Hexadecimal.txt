@@ -5,9 +5,9 @@ int main()
     long num;
     int rem=0,dec=0,place=0,j=0;
     char hexa[100];
+	
     printf("Enter Binray Number :");
     scanf("%ld",&num);
-    
     
     //binary to decimal conversion
     while(num!=0)
