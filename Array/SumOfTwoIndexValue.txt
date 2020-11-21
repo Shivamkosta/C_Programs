@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+   int a[20],i,n1,n2,sum=0,size;
+   printf("Enter the size of the array :");
+   scanf("%d",&size);
+   
+   printf("Enter the elements %d in the array :",size);
+   for(i=0; i<size; i++)
+   {
+       scanf("%d",&a[i]);
+   }
+   printf("Enter the starting index :");
+   scanf("%d",&n1);
+   
+   printf("Enter the ending index :");
+   scanf("%d",&n2);
+   
+   if(n1 >= 0 && n1 < size && n2 >= 0 && n2 < size && n1 != n2)
+   {
+   for(i=n1; i<=n2; i++)
+   {
+       sum = sum + a[i];
+   }
+   printf("Sum is %d",sum);
+   }
+   else
+   {
+       printf("Array index should not be same");
+   }
+    return 0;
+}
