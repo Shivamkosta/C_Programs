@@ -1,0 +1,52 @@
+ 
+#include<stdio.h>
+     
+int main()
+{
+    int arr[100];
+    int i;
+    
+    int size;
+     printf("Enter array size: ");
+    scanf("%d", &size);
+
+    printf("Enter %d array element:\n ", size);
+    for(i = 0; i < size; i++)
+    {
+        scanf(" %d ", &arr[i]);
+    }
+    printf("\nOriginal array is:\n ");
+    for(i = 0; i < size; i++)
+    {
+        printf(" %d ", arr[i]);
+        
+    }
+    
+    //define Bubble sort function
+    bubble_sort(arr,size);
+   printf("\nNew sorted array is:\n ");
+    for(i=0; i<=size-1; i++)
+    {
+        printf(" %d ",arr[i]);
+        getch();
+    }
+    return 0;
+}
+//bubble_sort algo...
+void bubble_sort(int arr[],int N)
+{
+    int i,j,temp;
+    for(j = 1; j <= N; j++)
+    {
+        for(i=0; i<=N-1-j; i++)
+        {
+            if(arr[i]>arr[i+1])
+            {
+                //swapping array
+                temp = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = temp;
+            }
+        }
+    }
+}
